@@ -3,10 +3,12 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 .kotlin
+*.xml
 
 
 
 ### IntelliJ IDEA ###
+.idea
 .idea/modules.xml
 .idea/jarRepositories.xml
 .idea/compiler.xml
@@ -14,7 +16,7 @@ target/
 *.iws
 *.iml
 *.ipr
-.idea/
+
 
 
 ### Eclipse ###
