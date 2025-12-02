@@ -38,6 +38,13 @@ public class Player {
         this.playedGames = playedGames;
     }
 
+    public Player(String name, int playedGames, String dni, int credits) {
+        this.name = name;
+        this.playedGames = playedGames;
+        this.dni = dni;
+        Credits = credits;
+    }
+
     @Override
     public String toString() {
         return "Player{" +
