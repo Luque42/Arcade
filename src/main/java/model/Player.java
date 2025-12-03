@@ -1,5 +1,8 @@
 package model;
 
+import java.util.Objects;
+import java.util.Scanner;
+
 public class Player {
     String name;
     String dni;
@@ -34,8 +37,7 @@ public class Player {
         return playedGames;
     }
 
-    public void setPlayedGames(int playedGames) {
-        this.playedGames = playedGames;
+    public Player() {
     }
 
     public Player(String name, int playedGames, String dni, int credits) {
@@ -54,5 +56,39 @@ public class Player {
                 ", playedGames=" + playedGames +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return Credits == player.Credits && playedGames == player.playedGames && Objects.equals(name, player.name) && Objects.equals(dni, player.dni);
+    }
+
+
+    /**
+     * metodo que da de alta un usuario nuevo
+     * añade 20 creditos por defecto a cada usuario cuando se crea
+     */
+    public void playerSignIn(){
+        Scanner sc=new Scanner(System.in);
+        String name="";
+        String dni="";
+        System.out.println("Escribe el nombre de usuario");
+        name= sc.nextLine();
+        setName(name);
+        System.out.println("Escribe el dni");
+        dni= sc.nextLine();
+        setDni(dni);
+        setCredits(20);
+
+    }
+    public boolean playerLogin(Object player){
+    boolean succesfulLog=false;
+
+
+    return succesfulLog;
+    }
+
+
 }
 
