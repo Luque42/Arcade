@@ -40,6 +40,10 @@ public class Player {
     public Player() {
     }
 
+    public Player(String name) {
+        this.name = name;
+    }
+
     public Player(String name, int playedGames, String dni, int credits) {
         this.name = name;
         this.playedGames = playedGames;
@@ -61,7 +65,7 @@ public class Player {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Player player = (Player) o;
-        return Credits == player.Credits && playedGames == player.playedGames && Objects.equals(name, player.name) && Objects.equals(dni, player.dni);
+        return Objects.equals(name, player.name);
     }
 
 
@@ -83,10 +87,20 @@ public class Player {
 
     }
     public boolean playerLogin(Object player){
-    boolean succesfulLog=false;
+        boolean succesfulLog=false;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Quien eres?");
+        String newplayer=sc.nextLine();
+        if (player.equals(newplayer)){
+            succesfulLog=true;
+            System.out.println("Hola de nuevo"+newplayer);
 
+        }else {
+            System.out.println("No te conozco");
+            System.out.print("vete a comer galletas dinosaurus");
+        }
 
-    return succesfulLog;
+        return succesfulLog;
     }
 
 
