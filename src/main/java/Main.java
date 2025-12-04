@@ -34,7 +34,7 @@ public class Main {
                       player.playerSignIn();
                        break;
                    case 2:
-                       //playerlogin
+                       player.playerLogin(player);
                        break;
                        //incrustar nuevo switch al case 2 para conttinuar
                    case 3:

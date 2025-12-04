@@ -50,5 +50,11 @@ public class Utils {
         }while(!validNumber);
         return result;
     }
+    public static String getString(String msg, String errorMsg){
+        Scanner sc=new Scanner(System.in);
+        System.out.println(msg);
+        String word = sc.nextLine();
+        return word;
+    }
 
 }

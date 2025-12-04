@@ -73,36 +73,45 @@ public class Player {
      * metodo que da de alta un usuario nuevo
      * añade 20 creditos por defecto a cada usuario cuando se crea
      */
-    public void playerSignIn(){
-        Scanner sc=new Scanner(System.in);
-        String name="";
-        String dni="";
+    public void playerSignIn() {
+        Scanner sc = new Scanner(System.in);
+        String name = "";
+        String dni = "";
         System.out.println("Escribe el nombre de usuario");
-        name= sc.nextLine();
+        name = sc.nextLine();
         setName(name);
         System.out.println("Escribe el dni");
-        dni= sc.nextLine();
+        dni = sc.nextLine();
         setDni(dni);
         setCredits(20);
 
     }
-    public boolean playerLogin(Object player){
-        boolean succesfulLog=false;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Quien eres?");
-        String newplayer=sc.nextLine();
-        if (player.equals(newplayer)){
-            succesfulLog=true;
-            System.out.println("Hola de nuevo"+newplayer);
 
-        }else {
-            System.out.println("No te conozco");
-            System.out.print("vete a comer galletas dinosaurus");
-        }
+    /**
+     * metodo que permite al usuario acceder a su menu de usuario mediante un nombre registrado previamente
+     *
+     * @param player
+     * @return true si el usuario existe
+     */
+    public boolean playerLogin(Object player) {
+        boolean successLog = false;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.println("Quien eres?");
+            String newplayer = sc.nextLine();
+            if (player.equals(newplayer)) {
+                successLog = true;
+                System.out.println("Hola de nuevo" + newplayer);
 
-        return succesfulLog;
+            } else {
+                System.out.println("No te conozco");
+                System.out.print("vete a comer galletas dinosaurus");
+            }
+
+
+        } while (!successLog);
+        return successLog;
+
     }
-
-
 }
 
