@@ -4,10 +4,11 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class Player {
-    String name;
-    String dni;
-    int Credits;
-    int playedGames;
+    private String name;
+    private String dni;
+    private int Credits;
+    private int playedGames;
+    private boolean isAdmin;
 
     public String getName() {
         return name;
@@ -44,11 +45,12 @@ public class Player {
         this.name = name;
     }
 
-    public Player(String name, int playedGames, String dni, int credits) {
+    public Player(String name, int playedGames, String dni, int credits,boolean isAdmin) {
         this.name = name;
         this.playedGames = playedGames;
         this.dni = dni;
         Credits = credits;
+        this.isAdmin=isAdmin;
     }
 
     @Override
