@@ -1,5 +1,7 @@
 package model;
 
+import utils.Utils;
+
 import java.util.Arrays;
 
 public class Machine {
@@ -85,5 +87,43 @@ public class Machine {
                 throw new Exception("La máquina no puede activarse ya está activada.");
             }
         }
+    }
+
+    public void showSelectMachineMenu() {
+        boolean getOut=false;
+        int machineMenu=0;
+        do {
+            Utils.getNumber(0, 0, "Menú de seleccion de máquina", "numero no valido");
+            switch (machineMenu) {
+                case 0:
+                    getOut=true;
+                    //  getUserMenu();
+                    break;
+                case 1:
+                    // showActiveMachines()
+                    break;
+                case 2:
+                    // showBestsMachines()
+                    break;
+                case 3:
+                    // eraseMachine()
+                    break;
+                case 4:
+                    //machine1Menu
+                    break;
+                case 5:
+                    //machine2Menu
+                    break;
+                case 6:
+                    //machine3Menu
+                    break;
+                case 7:
+                    //machine4Menu
+                    break;
+                case 8:
+                    //machine5Menu
+                    break;
+            }
+        }while(!getOut) ;
     }
 }
